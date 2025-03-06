@@ -4,46 +4,285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeff Williams - Technology Leader & AI Expert</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: sans-serif;
-            margin: 20px;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            margin: 0;
         }
-        h1, h2, h3 {
-            color: #333;
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
         }
+
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 20px;
         }
+
         .section {
-            margin-bottom: 20px;
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        strong, b {
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
         .skill-list {
             list-style: none;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 1rem;
         }
+
         .skill-item {
-            margin: 5px;
-            padding: 8px 12px;
-            background-color: #eee;
-            border-radius: 5px;
+            padding: 10px 16px;
+            background-color: var(--light-bg);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .split-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .text-section {
+            flex: 1;
+        }
+
+        .text-section p {
+            font-size: 1.1rem;
+        }
+
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-section img {
+            border-radius: var(--border-radius);
+            max-width: 100%;
+            transition: transform 0.3s ease;
+            box-shadow: var(--box-shadow);
+        }
+
+        .image-section img:hover {
+            transform: scale(1.02);
+        }
+
+        .experience-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .job-period {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+
+        .connect-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .connect-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 10px 16px;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+        }
+
+        .connect-link:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .connect-link i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .split-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-section {
+                order: 2;
+            }
+
+            .image-section {
+                order: 1;
+                margin-bottom: 1.5rem;
+            }
+
+            h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .connect-links {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Jeff Williams</h1>
-        <h2>Technology Leader & AI Expert</h2>
-
-        <div class="section">
-            <h3>About</h3>
-            <p>Experienced CIO with over 20 years in retail, e-commerce, and software development. Proven track record of driving innovation and business strategy through technology. Deep expertise in IT infrastructure, cloud solutions, and AI/LLM applications.</p>
-            <p>Founder of <a href="https://www.YourAthena.ai/"><b>YourAthena.ai</b></a> ...Make your corporate documents accessible with natural language!</p>
+    <div class="header">
+        <div class="container">
+            <h1>Jeff Williams</h1>
+            <h2>Technology Leader & AI Expert</h2>
         </div>
+    </div>
 
+    <div class="container">
+        <div class="section">
+            <h3>About Me</h3>
+            <p>Experienced CIO with over 20 years in retail, e-commerce, and software development. Proven track record of driving innovation and business strategy through technology. Deep expertise in IT infrastructure, cloud solutions, and AI/LLM applications.</p>
+
+            <div class="split-section">
+                <div class="text-section">
+                    <p>Creator of <a href="https://www.YourAthena.ai/"><strong>YourAthena.ai</strong></a> — Make your corporate documents accessible with natural language!</p>
+                </div>
+                <div class="image-section">
+                    <a href="https://YourAthena.ai">
+                        <img src="/static/images/employee with a question.png" width="256" height="256" alt="Athena Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h3>To find out more about YourAthena.ai</h3>
+ <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3o8pMpfSipYTnYnW8yGcAh3afL5_vBJQRtWYVip9dxajsAVrKY3p-IsH2Wwit50XTTTyq6sifk?gv=true',
+              color: '#039BE5',
+              label: 'Book an appointment',
+              target,
+            });
+          });
+        })();
+        </script>
+<!-- end Google Calendar Appointment Scheduling -->
         <div class="section">
             <h3>Key Skills</h3>
             <ul class="skill-list">
@@ -60,27 +299,73 @@
         </div>
 
         <div class="section">
-            <h3>Experience</h3>
-            <p><b>Principal, YourCIO</b> (2017 - Present)</p>
-            <p>Providing IT consulting and project management services to businesses of all sizes.</p>
+            <h3>Professional Experience</h3>
 
-            <p><b>Consultant to Reitmans Canada</b> (2023 - 2024)</p>
-            <p>Developed network strategy and prototype LLM applications for customer support, internal processes, and shopping assistance.</p> 
+            <div class="experience-item">
+                <div class="job-title">Principal, YourCIO</div>
+                <div class="job-period">2017 - Present</div>
+                <p>Providing IT consulting and project management services to businesses of all sizes, focusing on digital transformation and strategic technology implementation.</p>
+            </div>
 
-            <p><b>CIO/Head of Technology</b> (15 years)</p>
-            <p>Led technology strategy and operations for major Canadian retail companies.</p>
+            <div class="experience-item">
+                <div class="job-title">Consultant to Reitmans Canada</div>
+                <div class="job-period">2023 - 2024</div>
+                <p>Developed comprehensive network strategy and prototype LLM applications for enhancing customer support, streamlining internal processes, and creating innovative shopping assistance solutions.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">CIO/Head of Technology</div>
+                <div class="job-period">15+ years experience</div>
+                <p>Led technology strategy and operations for major Canadian retail companies, driving digital innovation while managing complex IT infrastructures and large technical teams.</p>
+            </div>
         </div>
 
         <div class="section">
             <h3>Education</h3>
-            <p><b>MBA</b>, University of Toronto - Rotman School of Management</p>
-            <p><b>BaSc, Systems Design Engineering</b>, University of Waterloo</p>
+            <div class="experience-item">
+                <div class="job-title">MBA</div>
+                <p>University of Toronto - Rotman School of Management</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">BaSc, Systems Design Engineering</div>
+                <p>University of Waterloo</p>
+            </div>
         </div>
 
         <div class="section">
-            <h3>Connect</h3>
-            <p><a href="https://www.linkedin.com/in/jeffnwilliams/">LinkedIn Profile</a></p>
+            <h3>Let's Connect</h3>
+            <p>I'm always interested in discussing technology, AI applications, and potential collaboration opportunities.</p>
+
+            <div class="connect-links">
+                <a href="https://www.linkedin.com/in/jeffnwilliams/" class="connect-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn Profile
+                </a>
+                <a href="mailto:jeff@yourcio.ca" class="connect-link">
+                    <i class="far fa-envelope"></i>
+                    Email Me
+                </a>
+
+            </div>
         </div>
     </div>
+ <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+        (function() {
+          var target = document.currentScript;
+          window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3o8pMpfSipYTnYnW8yGcAh3afL5_vBJQRtWYVip9dxajsAVrKY3p-IsH2Wwit50XTTTyq6sifk?gv=true',
+              color: '#039BE5',
+              label: 'Book an appointment',
+              target,
+            });
+          });
+        })();
+        </script>
+<!-- end Google Calendar Appointment Scheduling -->
 </body>
 </html>
