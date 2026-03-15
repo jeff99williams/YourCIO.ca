@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/static/images/logo_athena_ai.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            opacity: 0.6;
+            line-height: 1.6;
+            max-width: 8.5in;
+            margin: 0 auto;
+            /*padding: 1in;*/
+            color: #333;
+            background: url('/static/images/background web.png') center center no-repeat;
+            background-size: auto;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: -1;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo {
+            margin-bottom: 1rem;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .feature-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .feature-title {
+            color: #2c5282;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .feature-list {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        .feature-list li {
+            margin-bottom: 0.5rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <svg width="210" height="210" viewBox="0 0 200 200">
+                <circle cx="60" cy="60" r="60" fill="#f0f4ff"/>
+                <image href="/static/images/logo Athena.AI.png" x="10" y="10" width="200" height="200"/>
+            </svg>
+        </div>
+        <h1>YourAthena.ai</h1>
+        <div class="tagline">
+             Advanced AI-powered Natural Language Search and Q&A with Your Company Documents
+        </div>
+        <div>
+            Contact us for more information: <a href="mailto:info@yourathena.ai">info@yourathena.ai</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="feature-section">
+            <div class="feature-title">Advanced AI-Powered Search</div>
+            <ul class="feature-list">
+                <li>Natural language understanding for intuitive queries</li>
+                <li>Context-aware responses from your enterprise data</li>
+                <li>Multi-format support: documents and structured data</li>
+            </ul>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-title">Best-in-Class Architecture</div>
+            <ul class="feature-list">
+                <li>State-of-the-art LLMs for natural language processing</li>
+                <li>Vector database optimization for fast retrieval</li>
+                <li>Enterprise-grade security and compliance</li>
+            </ul>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-title">Cost-Optimized Infrastructure</div>
+            <ul class="feature-list">
+                <li>Smart caching and retrieval mechanisms</li>
+                <li>Automated scaling based on usage patterns</li>
+                <li>Direct flow-through of hosting costs with no markup</li>
+            </ul>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-title">Seamless Integration</div>
+            <ul class="feature-list">
+                <li>Quick deployment with existing systems</li>
+                <li>Private, secure-to-you URL for easy hassle-free deployment</li>
+                <li>Pre-built connectors for popular platforms</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        Transform your enterprise knowledge access today
+        <br>
+        www.yourathena.ai | info@yourathena.ai
+    </div>
+</body>
+</html>
